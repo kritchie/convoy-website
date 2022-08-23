@@ -3,8 +3,14 @@
 @tailwind utilities;
 
 
+@import './font';
+@import './typography';
+@import './prism';
+@import './page';
+
+
 @layer base {
 	:root {
-		--color-white: 252, 252, 252;
+		--color-white: 255, 255, 255;
 	}
 }

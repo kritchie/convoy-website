@@ -27,18 +27,22 @@ module.exports = {
 				default: '0px 2px 4px rgba(12, 26, 75, 0.04), 0px 4px 20px -2px rgba(50, 50, 71, 0.08)',
 				lg: '0px 4px 8px rgba(12, 26, 75, 0.1), 0px 10px 16px rgba(20, 37, 63, 0.06)',
 				xl: '0px 8px 16px rgba(12, 26, 75, 0.1), 0px 20px 24px rgba(20, 37, 63, 0.06)',
-				'2xl': '0px 16px 16px rgba(12, 26, 75, 0.05), 0px 30px 40px rgba(20, 37, 63, 0.08)'
+				'2xl': '0px 16px 16px rgba(12, 26, 75, 0.05), 0px 30px 40px rgba(20, 37, 63, 0.08)',
+				card: '40px 44px 81px rgba(111, 118, 138, 0.08)'
 			},
 			fontFamily: {
-				sans: ['Quicksand', ...defaultTheme.fontFamily.sans]
+				sans: ['Quicksand', ...defaultTheme.fontFamily.sans],
+				menlo: ['Menlo Regular']
 			}
 		},
 		screens: {
 			desktop: { min: '880px' },
-			mobile: { max: '875px' },
+			md: { min: '1240px' },
+			mobile: { max: '879px' }
 		},
 		borderRadius: {
 			'4px': '4px',
+			'6px': '6px',
 			'8px': '8px',
 			'10px': '10px',
 			'12px': '12px',
@@ -53,10 +57,15 @@ module.exports = {
 			18: ['18px', '30px'],
 			20: ['20px', '30px'],
 			24: ['24px', '35px'],
-			h1: ['24px', '140%'],
-			h2: ['18px', '140%'],
-			h3: ['16px', '140%'],
-			h4: ['14px', '140%']
+			26: ['26px', '36px'],
+			28: ['28px', '38px'],
+			30: ['30px', '46px'],
+			h1: ['34px', '140%'],
+			h2: ['24px', '140%'],
+			h3: ['20px', '140%'],
+			h4: ['18px', '140%'],
+			h5: ['16px', '140%'],
+			h6: ['14px', '140%']
 		},
 		colors: {
 			grey: {
@@ -73,6 +82,7 @@ module.exports = {
 				40: 'rgba(var(--color-white), 0.40)',
 				24: 'rgba(var(--color-white), 0.24)',
 				16: 'rgba(var(--color-white), 0.16)',
+				10: 'rgba(var(--color-white), 0.1)',
 				8: 'rgba(var(--color-white), 0.08)',
 				4: 'rgba(var(--color-white), 0.04)'
 			},
