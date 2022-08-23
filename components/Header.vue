@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="z-50">
 		<nav class="w-full m-auto bg-[#302f3f] shadow-default px-20px pt-60px pb-20px fixed left-[50%] -translate-x-1/2 translate-y-0 desktop:pt-50px desktop:pb-12px">
 			<section class="fixed top-0 left-0 bg-primary-100 w-full h-40px py-8px px-12px flex items-center justify-center font-medium text-12 text-white-100 desktop:text-14">
 				<span>Give us a star on GitHub</span>
