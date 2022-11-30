@@ -5,29 +5,35 @@
 		<Nuxt />
 		<!-- blog -->
 		<section class="bg-gradient-to-br from-[#2c2f3e] to-[#422f41] desktop:p-80px p-40px">
-			<div class="
-					bg-white-100
-					rounded-12px
+			<div
+				class="
+					rounded-8px
 					shadow-card
 					max-w-[970px]
-					pt-32px
-					px-12px
+					bg-white-100
 					m-auto
-					desktop:pl-56px desktop:pt-56px desktop:pr-0 desktop:flex desktop:justify-between desktop:flex-wrap desktop:items-end
+					pt-20px
+					px-12px
+					desktop:pl-56px desktop:pt-26px desktop:pr-0 desktop:flex desktop:justify-between desktop:flex-wrap desktop:items-end
 					mobile:mb-48px
-				">
+				"
+			>
 				<div class="desktop:max-w-[470px] p-10px">
 					<div class="flex justify-between items-center mb-24px">
-						<div class="py-2px px-16px bg-[#0747a6] bg-opacity-10 rounded-2px font-medium text-14 text-primary-100 uppercase">Blog post</div>
+						<div class="py-2px px-16px bg-[#0747a6] bg-opacity-10 rounded-2px font-medium text-14 text-primary-100 uppercase">FEATURED</div>
 						<div class="font-medium text-14">{{ featurePosts.published_at | date }}</div>
 					</div>
 					<nuxt-link :to="'/blog/' + featurePosts.slug">
-						<h3 class="desktop:text-32 text-26 font-bold">{{ featurePosts.title }}</h3>
+						<h3 class="desktop:text-32 text-26 font-bold mb-16px">{{ featurePosts.title }}</h3>
 					</nuxt-link>
-
 					<p class="font-light text-grey-80 text-16 mb-16px">{{ featurePosts.description }}...</p>
 					<div class="flex flex-col flex-wrap my-26px desktop:items-end desktop:flex-row desktop:justify-between">
-						<a v-if="featurePosts.primary_author" :href="featurePosts.primary_author.twitter ? 'http://twitter.com/' + featurePosts.primary_author.twitter : ''" target="_blank" class="flex items-start mb-40px desktop:mb-0">
+						<a
+							v-if="featurePosts.primary_author"
+							:href="featurePosts.primary_author.twitter ? 'http://twitter.com/' + featurePosts.primary_author.twitter : ''"
+							target="_blank"
+							class="flex items-start mb-40px desktop:mb-0"
+						>
 							<div class="w-40px h-40px rounded-[50%] mr-16px overflow-hidden flex items-center bg-grey-20">
 								<img :src="require(`~/static/profile-images/${featurePosts.primary_author.name}.png`)" class="w-full mr-12px rounded-[50%]" alt="author imge" />
 							</div>
@@ -42,8 +48,9 @@
 						</nuxt-link>
 					</div>
 				</div>
-				<div class="w-full desktop:w-380px desktop:right-0 desktop:bottom-0 desktop:mt-0" v-if="featurePosts.feature_image">
-					<img :src="require(`~/static/feature-images/${featurePosts.feature_image}`)" class="rounded-br-10px w-full" alt="featured post img" />
+
+				<div class="w-full desktop:w-380px desktop:right-0 desktop:bottom-0 desktop:mt-0"  v-if="featurePosts.feature_image">
+					<img :src="require(`~/static/feature-images/${featurePosts.feature_image}`)" class="rounded-bl-10px w-full" alt="featured post img" />
 				</div>
 			</div>
 		</section>
